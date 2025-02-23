@@ -79,12 +79,12 @@ CloseButton.Font = Enum.Font.SourceSansBold
 CloseButton.TextSize = 24
 CloseButton.Parent = MainFrame
 
-local ButtonContainer = Instance.new("ScrollingFrame") -- Change Frame to ScrollingFrame
+local ButtonContainer = Instance.new("ScrollingFrame")
 ButtonContainer.Size = UDim2.new(1, 0, 1, -60)
 ButtonContainer.Position = UDim2.new(0, 0, 0, 60)
 ButtonContainer.BackgroundTransparency = 1
-ButtonContainer.CanvasSize = UDim2.new(0, 0, 0, 0) -- Initialize CanvasSize
-ButtonContainer.ScrollBarThickness = 8 -- Optional: Adjust scrollbar thickness
+ButtonContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+ButtonContainer.ScrollBarThickness = 8
 ButtonContainer.Parent = MainFrame
 
 local function createButton(i, name, action)
@@ -104,9 +104,9 @@ local function createButton(i, name, action)
 
     -- Create the line under the button
     local line = Instance.new("Frame")
-    line.Size = UDim2.new(0.8, 0, 0, 2)  -- Width matches button, height is 2px
-    line.Position = UDim2.new(0.1, 0, 0, (i - 1) * 40 + 30)  -- Position right below the button
-    line.BackgroundColor3 = Color3.fromRGB(50, 50, 50)  -- Line color
+    line.Size = UDim2.new(0.8, 0, 0, 2)
+    line.Position = UDim2.new(0.1, 0, 0, (i - 1) * 40 + 30)
+    line.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     line.BorderSizePixel = 0  -- No border
     line.Parent = ButtonContainer
 
@@ -3054,19 +3054,16 @@ MinimizedButton.BackgroundTransparency = 1
 MinimizedButton.Parent = ScreenGui
 MinimizedButton.Visible = false
 
--- Close button functionality
 CloseButton.MouseButton1Click:Connect(function()
     MainFrame.Visible = false
     MinimizedButton.Visible = true
 end)
 
--- Minimized button functionality
 MinimizedButton.MouseButton1Click:Connect(function()
     MainFrame.Visible = true
     MinimizedButton.Visible = false
 end)
 
--- Dragging logic for MainFrame
 local dragging = false
 local dragInput, dragStart, startPos
 
@@ -3091,7 +3088,6 @@ MainFrame.InputEnded:Connect(function(input)
     end
 end)
 
--- Dragging logic for MinimizedButton
 MinimizedButton.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 then
         dragging = true
