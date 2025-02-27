@@ -3009,6 +3009,16 @@ game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 end)
 end
 
+local function action17()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+
+-- ] To Open And Close Gui
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Universal-Vehicle-Script/main/Main.lua'))()
+
+end
+
 createButton(1, "Meepcity Script", action1)
 createButton(2, "Nameless admin", action2)
 createButton(3, "Orca admin", action3)
@@ -3025,6 +3035,7 @@ createButton(13, "Night mode", action13)
 createButton(14, "Fling yourself roulette", action14)
 createButton(15, "Simple spy", action15)
 createButton(16, "Fake verified chat", action16)
+createButton(17, "Universal vehicle speed", action17)
 
 SecondFrame.Size = UDim2.new(0, 270, 0, 350)
 SecondFrame.Position = MainFrame.Position
