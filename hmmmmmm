@@ -3019,6 +3019,16 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Documantation12/Unive
 
 end
 
+local function action18()
+loadstring(game:HttpGet("https://pastebin.com/raw/8e6ysAQU"))()
+end
+
+local function action19()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/vYSDK0xt"))()
+
+end
+
 createButton(1, "Meepcity Script", action1)
 createButton(2, "Nameless admin", action2)
 createButton(3, "Orca admin", action3)
@@ -3036,6 +3046,8 @@ createButton(14, "Fling yourself roulette", action14)
 createButton(15, "Simple spy", action15)
 createButton(16, "Fake verified chat", action16)
 createButton(17, "Universal vehicle speed", action17)
+createButton(18, "Meepcity backyard invader", action18)
+createButton(19, "Copy ID by username", action19)
 
 SecondFrame.Size = UDim2.new(0, 270, 0, 350)
 SecondFrame.Position = MainFrame.Position
